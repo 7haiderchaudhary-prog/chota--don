@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Short Valentine Certificate 😜❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(to top, #ffdde1, #ee9ca7);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* Moving Clouds */
+.cloud {
+    position: absolute;
+    top: 50px;
+    width: 150px;
+    animation: moveCloud 20s linear infinite;
+}
+
+@keyframes moveCloud {
+    0% { left: -200px; }
+    100% { left: 110%; }
+}
+
+/* Main Playground Card */
+.playground {
+    margin-top: 120px;
+    background: #fff;
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff1e4d;
+}
+
+/* Height meter */
+#meter {
+    width: 100%;
+    height: 30px;
+    background: #ffe0e6;
+    border-radius: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: #ff4d6d;
+    transition: 2s;
+}
+
+/* Teddy Bounce */
+.teddy {
+    width: 120px;
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Certificate */
+#certificate {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 20px;
+    font-size: 1.2em;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Clouds -->
+<img class="cloud" src="https://cdn-icons-png.flaticon.com/512/414/414927.png">
+
+<div class="playground">
+    <h1>🎮 Height Detector 3000 🎮</h1>
+    <p>Scanning my Valentine...</p>
+
+    <button onclick="scanHeight()">Start Height Scan 😜</button>
+
+    <div id="meter">
+        <div id="progress"></div>
+    </div>
+
+    <img class="teddy" src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
+
+    <div id="result"></div>
+
+    <div id="certificate">
+        🏆 Official Certificate 🏆 <br><br>
+        This certifies that you are... <br>
+        💕 Pocket-Sized Princess 💕 <br><br>
+        Even if you're short... <br>
+        Your cuteness level is MAXIMUM 9999% 😍 <br><br>
+        Happy Children’s Day + Valentine’s Day ❤️
+    </div>
+</div>
+
+<script>
+function scanHeight() {
+    const progress = document.getElementById("progress");
+    const result = document.getElementById("result");
+    const certificate = document.getElementById("certificate");
+
+    progress.style.width = "0%";
+    certificate.style.display = "none";
+    result.innerHTML = "Scanning... Please stand on your tiptoes 😂";
+
+    setTimeout(() => {
+        progress.style.width = "35%";
+    }, 500);
+
+    setTimeout(() => {
+        progress.style.width = "65%";
+    }, 1500);
+
+    setTimeout(() => {
+        progress.style.width = "82%";
+        result.innerHTML = "Hmm... still detecting... are you hiding? 😆";
+    }, 2500);
+
+    setTimeout(() => {
+        progress.style.width = "100%";
+        result.innerHTML = "Scan Complete! Result: Adorably Short 🥺❤️";
+        certificate.style.display = "block";
+    }, 4000);
+}
+</script>
+
+</body>
+</html>
